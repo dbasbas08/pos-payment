@@ -7,6 +7,7 @@ POS Ecommerce payment test project using GraphQL and Kotlin
 * Kotlin
 * GraphQL
 * PostgreSQL
+* Docker
 * Spring Boot
 * Spring Data JPA
 
