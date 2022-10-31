@@ -1,0 +1,41 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+type Query {
+    sales(
+        startDateTime: String!
+        endDateTime: String!
+    ): [SaleResult]
+}
+
+type SaleResult {
+    sales: String
+    points: Int
+    datetime: DateTime
+}
+
+type Mutation {
+    createPayment(
+        price: String!
+        price_modifier: Float!
+        payment_method: PaymentMethod!
+        datetime: String!
+    ): CreatePaymentResult!
+}
+
+enum PaymentMethod {
+    CASH
+    CASH_ON_DELIVERY
+    VISA
+    MASTERCARD
+    AMEX
+    JCB
+}
+
+type CreatePaymentResult {
+    final_price: String
+    points: Int
+}
+
+scalar DateTime

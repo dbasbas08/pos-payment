@@ -1,0 +1,23 @@
+graphql:
+  packages: "com.dbasbas.pospayment"
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+app:
+  datasource:
+    postgres:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: postgres
+
+server:
+  error:
+    include-binding-errors: always
+    include-message: always
+
+sql:
+  init:
+    mode: always
+
