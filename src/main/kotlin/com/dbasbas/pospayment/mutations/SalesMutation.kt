@@ -40,8 +40,6 @@ class SalesMutation : Mutation {
             }
 
             val date = LocalDateTime.ofInstant(Instant.parse(datetime), ZoneId.of("UTC")).truncatedTo(ChronoUnit.MINUTES)
-            println(date)
-
             salesService.createPayment(
                 final_price = finaPrice,
                 price_modifier = price_modifier,
